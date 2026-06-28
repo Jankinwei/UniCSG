@@ -1,7 +1,6 @@
-# UniCSG
+# UniCSG: Unified High-Fidelity Content-Constrained Style-Driven Generation via Staged Semantic and Frequency Disentanglement
 ## 🚧 Coming Soon
-Official PyTorch implementation for ECCV 2026 paper:
-**UniCSG: Unified High-Fidelity Content-Constrained Style-Driven Generation via Staged Semantic and Frequency Disentanglement**
+Official PyTorch implementation for ECCV 2026 paper
 
 ## 📅 Release Schedule
 - Full training & inference code: Coming soon

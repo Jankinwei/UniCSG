@@ -1,8 +1,12 @@
-# UniCSG: Unified High-Fidelity Content-Constrained Style-Driven Generation via Staged Semantic and Frequency Disentanglement
-![UniCSG Overview](./assets/teaser_figure.png)
-Given a content image, UniCSG transforms it into
-user-specified styles under both text prompts and reference exemplars, showing faithful content preservation and style alignment. In
-the reference-guided rows, each triplet shows (left to right) the reference image, the content image, and the generated result.
+<div align="center">
+<h2>UniCSG: Unified High‑Fidelity Content‑Constrained Style‑Driven Generation via Staged Semantic and Frequency Disentanglement</h2>
+</div>
+
+<br>
+
+## 📖 Introduction
+![UniCSG Overview](./assets/teaser_figure.pdf)
+Style transfer must match a target style while preserving content semantics. DiT-based diffusion models often suffer from content–style entanglement, leading to reference-content leakage and unstable generation. We present UniCSG, a uniffed framework for content-constrained, style-driven generation in both text-guided and reference-guided settings. UniCSG employs staged training: (i) a latent-space semantic disentanglement stage that combines low-frequency preprocessing with conditioning corruption to encourage content–style separation, and (ii) a latent-space frequency-aware detail reconstruction stage that reffnes details via multiscale frequency supervision. We further incorporate pixel-space reward learning to align latent objectives with perceptual quality after decoding. Experiments demonstrate improved content faithfulness, style alignment, and robustness in both settings.
 
 ## 🚀 Quick Start
 ### 1. Environment Setup
@@ -11,27 +15,27 @@ the reference-guided rows, each triplet shows (left to right) the reference imag
 git clone https://github.com/modelscope/DiffSynth‑Studio.git
 cd DiffSynth‑Studio
 pip install -e .
-
-# Clone UniCSG project files into workspace
-git clone https://github.com/Jankinwei/UniCSG ./unicsg
-cd unicsg
 ```
 
 ### 2. Model Base & Resource Info
 - Backbone Base Model: [Qwen‑Image‑Edit‑2509](https://huggingface.co/Qwen/Qwen-Image-Edit-2509)
 - Acceleration LoRA: [Qwen‑Image‑Lightning](https://huggingface.co/lightx2v/Qwen-Image-Lightning)
-- Custom UniCSG task‑specific LoRAs: coming soon
-- Training Dataset: Built on [OmniConsistency](https://github.com/showlab/OmniConsistency) & [OmniStyle](https://github.com/StyleX-Research/OmniStyle)
+- UniCSG task‑specific LoRAs: coming soon
+- Dataset: Built on [OmniConsistency](https://github.com/showlab/OmniConsistency) & [OmniStyle](https://github.com/StyleX-Research/OmniStyle)
 - Evaluation Benchmark: CSG‑Bench
 
 ### 3. Inference
 ```bash
-python infer_style_transfer.py
+# Text-Guided Image Style Transfer
+CUDA_VISIBLE_DEVICES=0 python inference_text_guided.py
+
+# Reference-Guided Image Style Transfer
+CUDA_VISIBLE_DEVICES=0 python inference_reference_guided.py
 ```
 
 ## 📅 Release Schedule
-- Full training & inference code: Coming soon
-- Pre-trained checkpoint: To be released together
+- Full training code: Coming soon
+- UniCSG task‑specific LoRAs: Coming soon
 
 ## 📌 Citation
 If our work is helpful to your research, please cite our paper:

@@ -1,17 +1,17 @@
 <div align="center">
 <h2>UniCSG: Unified High‑Fidelity Content‑Constrained Style‑Driven Generation via Staged Semantic and Frequency Disentanglement</h2>
 
-Jingwei Yang$^1$, Ruoxi Wu$^2$, Wei Shen$^2$, Meng Li$^2$, Yulong Liu$^2$, Huimin She$^2$, Lunxi Yuan$^2$
+Jingwei Yang<sup>1</sup>, Ruoxi Wu<sup>2</sup>, Wei Shen<sup>2</sup>, Meng Li<sup>2</sup>, Yulong Liu<sup>2</sup>, Huimin She<sup>2</sup>, Lunxi Yuan<sup>2</sup>
 
-<sup>$^1$ China University of Mining and Technology, Beijing, China</sup>
+<sup>1</sup> China University of Mining and Technology, Beijing, China
 <br>
-<sup>$^2$ OPPO Artificial Intelligence Center, Beijing, China</sup>
+<sup>2</sup> OPPO Artificial Intelligence Center, Beijing, China
 </div>
 
 <br>
 
 ## 📖 Introduction
-![UniCSG Overview](./assets/teaser_figure.png)
+![UniCSG Overview](./assets/teaser.png)
 Style transfer must match a target style while preserving content semantics. DiT-based diffusion models often suffer from content–style entanglement, leading to reference-content leakage and unstable generation. We present UniCSG, a uniffed framework for content-constrained, style-driven generation in both text-guided and reference-guided settings. UniCSG employs staged training: (i) a latent-space semantic disentanglement stage that combines low-frequency preprocessing with conditioning corruption to encourage content–style separation, and (ii) a latent-space frequency-aware detail reconstruction stage that reffnes details via multiscale frequency supervision. We further incorporate pixel-space reward learning to align latent objectives with perceptual quality after decoding. Experiments demonstrate improved content faithfulness, style alignment, and robustness in both settings.
 
 ## 🚀 Quick Start
